@@ -1,21 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 
-import Card from "../components/Card.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
 
 const allPost = await getCollection("tech");
-const firstThreePosts = allPost.slice(0, 3);
 ---
 
-<Layout title="pagina principal">
+<Layout title="posts">
   <section class="container mx-auto">
-    <Header title="Hola Bellakin" />
+    <Header title="Todos los posts" />
 
     <section class="grid grid-cols-2 gap-4">
       {
-        firstThreePosts.map((post) => (
+        allPost.map((post) => (
           <Card
             href={`/blog/${post.slug}`}
             title={post.data.title}
