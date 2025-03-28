@@ -1,5 +1,6 @@
 ---
 import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,9 +8,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="pagina principal">
-  <Card
-    title="Soy una card"
-    time="25 septiembre"
-    tags={["hola", "soy", "jose"]}
-  />
+  <section class="container mx-auto">
+    <Header title="Hola" />
+    <Card
+      title="Soy una card"
+      time="25 septiembre"
+      tags={["hola", "soy", "jose"]}
+    />
+  </section>
 </Layout>
