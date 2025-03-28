@@ -16,6 +16,7 @@ const allPost = await getCollection("tech");
       {
         allPost.map((post) => (
           <Card
+            href={`/blog/${post.slug}`}
             title={post.data.title}
             time={post.data.pubDate}
             tags={post.data.tags}

@@ -1,11 +1,12 @@
 ---
 export interface Props {
+  href: string;
   title: string;
   time: any;
   tags: string[];
 }
 
-const { title, time, tags } = Astro.props;
+const { title, time, tags, href } = Astro.props;
 ---
 
 <article
@@ -15,7 +16,7 @@ const { title, time, tags } = Astro.props;
     <time datetime="2022-10-10" class="block text-xs text-gray-500">
       {time}
     </time>
-    <a href="#">
+    <a href={href}>
       <h3 class="mt-0.5 text-lg font-medium text-gray-900">
         {title}
       </h3>
