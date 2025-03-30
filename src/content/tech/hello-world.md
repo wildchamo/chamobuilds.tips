@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/Post.astro"
 title: "Hello World"
 pubDate: 2024-05-07
 description: " Hello this is my first recommendation"
