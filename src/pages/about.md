@@ -2,7 +2,6 @@
 ---
 
 title: "Soy Jose"
-layout: "../layouts/baseMD.astro"
 ---
 
 # About Me
