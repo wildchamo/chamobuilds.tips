@@ -13,11 +13,15 @@ import svelte from "@astrojs/svelte";
 
 import sitemap from "@astrojs/sitemap";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
   site: "http://localhost:4321/",
   integrations: [mdx(), react(), vue(), svelte(), sitemap()],
+  adapter: cloudflare(),
 });
